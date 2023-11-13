@@ -77,7 +77,8 @@ export default function Demo() {
           type="text"
           name="fake-filter"
           value={text2}
-          className=""
+          placeholder="type a text"
+          className="border-gray-100 bg-slate-300 p-1"
           onChange={(e) => {
             setText2(e.target.value);
           }}
@@ -89,7 +90,13 @@ export default function Demo() {
         <label htmlFor="text" className="mr-2">
           Type Fast
         </label>
-        <input type="text" name="text" className="" onChange={handleChange} />
+        <input
+          type="text"
+          name="text"
+          placeholder="type a text fast"
+          className="border-gray-100 bg-slate-300 p-1"
+          onChange={handleChange}
+        />
         <div>
           {isPending ? <p>Loading...</p> : letters.map((l) => <li>{l}</li>)}
         </div>
